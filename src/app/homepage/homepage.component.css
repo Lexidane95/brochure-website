@@ -1,0 +1,50 @@
+.banner {
+    background-color: #eea990;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .banner img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .banner-button {
+    background-color: #aa6f73;
+    color: #f6e0b5;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .middle {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+  
+  .middle .image {
+    text-align: center;
+  }
+  
+  .middle img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .bottom-banner {
+    background-color: #a39193;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .about-button {
+    background-color: #aa6f73;
+    color: #f6e0b5;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  /* Add more styles as needed */
+  

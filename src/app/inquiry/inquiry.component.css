@@ -1,0 +1,23 @@
+.inquiry-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .inquiry-form label,
+  .inquiry-form input,
+  .inquiry-form textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .inquiry-form button {
+    background-color: #aa6f73;
+    color: #f6e0b5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Add more styles as needed */
+  
