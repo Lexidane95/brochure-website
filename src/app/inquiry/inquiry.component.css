@@ -1,23 +1,46 @@
 .inquiry-form {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .inquiry-form label,
-  .inquiry-form input,
-  .inquiry-form textarea {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .inquiry-form button {
-    background-color: #aa6f73;
-    color: #f6e0b5;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+  max-width: 500px;
+}
+
+.inquiry-form label {
+  display: block; /* Make labels block-level to place them on separate lines */
+  margin-bottom: 5px; /* Add spacing below each label */
+}
+
+.inquiry-form input[type="text"],
+.inquiry-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px; /* Add spacing below each input field */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.inquiry-form button {
+  background-color: #aa6f73;
+  color: #f6e0b5;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Add spacing between fields and button */
+}
+
+
+.inquiry-form button {
+  background-color: #aa6f73;
+  color: #f6e0b5;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
   
   /* Add more styles as needed */
   

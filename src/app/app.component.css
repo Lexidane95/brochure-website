@@ -2,6 +2,8 @@
     background-color: #66545e;
     color: #f6e0b5;
     padding: 10px;
+    text-align: center;
+    font-weight: bold;
   }
   
   .header nav a {
@@ -17,11 +19,6 @@
     padding: 10px;
   }
   
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
   
   /* Add more styles as needed */
   
