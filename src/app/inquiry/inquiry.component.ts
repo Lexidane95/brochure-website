@@ -13,15 +13,21 @@ export class InquiryComponent {
     enquiry: ''
   };
 
-  isFormSubmitted = false; // Add this line
+  isFormSubmitted = false;
 
   submitForm(form: NgForm) {
     if (form.valid) {
-      // Perform form submission logic
-      this.isFormSubmitted = true; // Set the flag to show the success message
-      form.resetForm(); // Reset the form
+      this.isFormSubmitted = true;
+      form.resetForm();
     }
   }
+
+  clearForm() {
+    this.isFormSubmitted = false;
+    this.formData = {
+      name: '',
+      email: '',
+      enquiry: ''
+    };
+  }
 }
-
-

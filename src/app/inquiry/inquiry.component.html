@@ -1,15 +1,42 @@
-<form class="inquiry-form" #inquiryForm="ngForm" (ngSubmit)="submitForm(inquiryForm)">
-  <label for="name">Name:</label>
-  <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>
-  
-  <label for="email">Email:</label>
-  <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
-  
-  <label for="enquiry">Enquiry:</label>
-  <textarea id="enquiry" [(ngModel)]="formData.enquiry" name="enquiry" required></textarea>
-  
-  <button type="submit" [disabled]="!inquiryForm.form.valid">Submit</button>
-</form>
-
-  
-  
+<div class="container">
+  <div class="header">
+    For inquiries, please leave us a message!
+  </div>
+  <div class="inquiry-form">
+    <form class="inquiry-form" #inquiryForm="ngForm" (ngSubmit)="submitForm(inquiryForm)">
+      <div class="form-field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="formData.name" name="name" required #nameInput="ngModel">
+        <div class="error-message" *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
+          <span *ngIf="nameInput.errors?.['required']">This field is required.</span>
+        </div>
+      </div>
+      
+      <div class="form-field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="formData.email" name="email" required #emailInput="ngModel">
+        <div class="error-message" *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+          <span *ngIf="emailInput.errors?.['required']">This field is required.</span>
+          <span *ngIf="emailInput.errors?.['email']">Email is invalid.</span>
+        </div>
+      </div>
+      
+      <div class="form-field">
+        <label for="enquiry">Enquiry:</label>
+        <textarea id="enquiry" [(ngModel)]="formData.enquiry" name="enquiry" required #enquiryInput="ngModel"></textarea>
+        <div class="error-message" *ngIf="enquiryInput.invalid && (enquiryInput.dirty || enquiryInput.touched)">
+          <span *ngIf="enquiryInput.errors?.['required']">This field is required.</span>
+        </div>
+      </div>
+      
+      <div class="success-message" *ngIf="isFormSubmitted">
+        Your form has been successfully submitted!
+      </div>
+      
+      <div class="button-container">
+        <button class="clear-button" type="button" (click)="clearForm()">Clear</button>
+        <button type="submit" [disabled]="!inquiryForm.form.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
