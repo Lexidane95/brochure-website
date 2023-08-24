@@ -13,12 +13,13 @@ export class InquiryComponent {
     enquiry: ''
   };
 
-  submitForm(inquiryForm: NgForm) {
-    if (inquiryForm.valid) {
-      console.log('Form submitted:', this.formData);
-      // Here you can add code to send the form data to your backend or perform other actions.
-    } else {
-      console.log('Form is invalid. Please check the fields.');
+  isFormSubmitted = false; // Add this line
+
+  submitForm(form: NgForm) {
+    if (form.valid) {
+      // Perform form submission logic
+      this.isFormSubmitted = true; // Set the flag to show the success message
+      form.resetForm(); // Reset the form
     }
   }
 }
