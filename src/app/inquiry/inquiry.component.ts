@@ -14,16 +14,18 @@ export class InquiryComponent {
   };
 
   isFormSubmitted = false;
+  submitButtonText = 'Submit';
 
   submitForm(form: NgForm) {
     if (form.valid) {
       this.isFormSubmitted = true;
-      form.resetForm();
+      this.submitButtonText = 'Submit again!';
     }
   }
 
   clearForm() {
     this.isFormSubmitted = false;
+    this.submitButtonText = 'Submit';
     this.formData = {
       name: '',
       email: '',
